@@ -1,6 +1,7 @@
 from pathlib import Path
 
 from buscador_pep.scraper import Scraper
+from buscador_pep.driver import get_driver
 from buscador_pep.llm_filter import filter_offers
 from buscador_pep.config import read_configuration
 from buscador_pep.user_profile import read_user_profile
@@ -10,7 +11,7 @@ from buscador_pep.user_profile import read_user_profile
 def main():
     config = read_configuration(Path("config.toml"))
     
-    scraper = Scraper(config.portal_url)
+    scraper = Scraper(config.portal_url, get_driver)
     
     offers = scraper.get_offers()
     
