@@ -4,7 +4,6 @@ from buscador_pep.scraper import Scraper
 from buscador_pep.driver import get_driver
 from buscador_pep.llm_filter import filter_offers
 from buscador_pep.config import read_configuration
-from buscador_pep.user_profile import read_user_profile
 
 
 
@@ -15,9 +14,7 @@ def main():
     
     offers = scraper.get_offers()
     
-    user_profile = read_user_profile(Path(config.user_profile_path))
-    
-    filtered_offers = filter_offers(offers, user_profile)
+    filtered_offers = filter_offers(offers, config.user_profile)
     
     for offer in filtered_offers:
         print(offer)
