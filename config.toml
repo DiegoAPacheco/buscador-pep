@@ -1,2 +1,11 @@
-portal_url = "https://www.empleospublicos.cl/"
-user_profile_path = "user_profile.txt"
+# Configuración del Buscador de Empleos en el Portal de Empleos Públicos
+
+[user_profile]
+
+overview = "Profesional autónomo, innovador y colaborador con formación en ciencias naturales y estadística, lo que me capacita para gestionar la innovación con criterios racionales e investigativos. Con más de siete años de experiencia en investigación científica y tres en la gestión pública, he desarrollado un dominio amplio en el análisis de datos, tanto a nivel teórico como informático. Mi perspectiva interdisciplinaria en Ciencia de Datos puede ser un valioso aporte a su equipo."
+location = "Todas las regiones"
+industry = "Todas las industrias"
+job_opening_status = "Todos los estados"
+job_category = "Todos los tipos de cargos"
+pay_range = "Todas las rentas"
+legal_status = "Todas las calidades jurídicas"
