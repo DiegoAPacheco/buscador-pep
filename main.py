@@ -10,7 +10,9 @@ from buscador_pep.config import read_configuration
 def main():
     config = read_configuration(Path("config.toml"))
     
-    scraper = Scraper(config.portal_url, get_driver)
+    scraper = Scraper(config.portal_url, config.user_profile, get_driver())
+
+    scraper.start()
     
     offers = scraper.get_offers()
     
